@@ -11,9 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
-body {
+/* body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #f4f4f4;
+} */
+/* Reset Margin and Padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Ensure FloatingHeader Container Covers Full Screen */
+.floating-header {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  background-color: #f8f9fa; /* Optional background */
 }

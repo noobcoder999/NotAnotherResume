@@ -27,12 +27,13 @@
 import React from "react";
 import "./App.css";
 import ResumeForm from "./components/ResumeForm";
+import FloatingHeader from "./components/FloatingHeader";
 
 function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Not Another Resume</h1>
+      <FloatingHeader />
       </header>
       <main>
         <ResumeForm />
