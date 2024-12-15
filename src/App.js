@@ -32,9 +32,9 @@ import FloatingHeader from "./components/FloatingHeader";
 function App() {
   return (
     <div className="app-container">
-      <header className="app-header">
+      {/* <header className="app-header">
       <FloatingHeader />
-      </header>
+      </header> */}
       <main>
         <ResumeForm />
       </main>

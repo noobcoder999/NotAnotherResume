@@ -1,133 +1,133 @@
-.form-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  .form-group input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .generate-btn {
-    background-color: #5cb85c;
-    color: white;
-    font-size: 1rem;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .generate-btn:hover {
-    background-color: #4cae4c;
-  }
+.resume-forms {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes the full screen height */
+  background-color: #f8f9fa; /* Light background for the form */
+}
 
-  .resume-forms {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f9fa;
-    color: #333;
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .header {
-    padding: 20px;
-    text-align: right;
-  }
-  
-  .get-started-button {
-    background-color: #6a5af9;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .get-started-button:hover {
-    background-color: #5748d1;
-  }
-  
-  .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
-  
+.main-content {
+  flex: 1; /* Let the content grow and fill available space */
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url(../assets/backgroundimg.webp);  /* Use the imported image */
+  background-size: cover;    /* Makes the image cover the whole container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;  /* Prevent the image from repeating */
+}
+/*
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 600px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+  */
+
   .card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    text-align: center;
-  }
-  
-  .icon {
-    margin-bottom: 20px;
-  }
-  
-  .pdf-icon {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .description {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  .footer {
-    background-color: #1a1a2e;
-    color: #ccc;
+    background-image: url(../assets/cardbgm.JPG);
+    /* background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.4)),  url(../assets/cardbgm.JPG); */
+    background-color: #fdfdfd; /* Light paper-like background color */
+    background-blend-mode: multiply; /* Blends the texture with the background */
+    background-position: center center;
+    border: 1px solid #d9d9d9; /* Light border to resemble paper edge */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds depth */
+    border-radius: 5px; /* Slight rounding to soften edges */
     padding: 20px;
+    font-family: 'Georgia', serif; /* Gives it a handwritten or classical touch */
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px; /* Adjust width */
+    margin: 20px auto; /* Centers the card */
+    text-align: left;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Soft shadow around edges */
+    
   }
   
-  .footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-  }
-  
-  .footer .social-icons img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .footer-text {
-    font-size: 14px;
-  }
-  
-  
+  /* Optional hover effect for more interaction */
+  /* .card:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s ease;
+  } */
+
+.card .icon {
+  margin-bottom: 20px;
+}
+
+.card .icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Push footer to the bottom */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+/* Button container for centering */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base button styling */
+.popout-button {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Gradient background */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for pop-out */
+.popout-button:hover {
+  transform: scale(1.1); /* Slightly enlarge the button */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for pop effect */
+}
+
+/* Active (click) effect */
+.popout-button:active {
+  transform: scale(1); /* Reset scale to original */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
