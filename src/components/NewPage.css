@@ -1,0 +1,132 @@
+/* Overall Page Styling */
+.new-page {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: "Arial", sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Section Boxes */
+  .section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Section Headings */
+  .section h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #ccc;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .input-group input {
+    flex: 1 1 calc(50% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: box-shadow 0.2s;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #007bff;
+    border: 1px solid #007bff;
+  }
+  
+  /* Rich Text Editor */
+  .ql-container {
+    height: 150px;
+    border-radius: 10px;
+  }
+  
+  .ql-toolbar {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .input-group input {
+      flex: 1 1 100%;
+    }
+  }
+
+  .react-quill-container {
+    width: 100%; /* Adjust based on the parent container */
+    max-width: 800px; /* Set a max-width for the editor */
+    margin: 0 auto; /* Center the editor */
+  }
+  
+  .ql-container {
+    height: auto; /* Let the height grow dynamically */
+    min-height: 150px; /* Minimum height for the editor */
+    max-height: 300px; /* Optional: Limit maximum height */
+    overflow-y: auto; /* Enable scroll when text exceeds max-height */
+    resize: vertical; /* Optional: Allow users to resize vertically */
+  }
+  
+  .ql-editor {
+    white-space: pre-wrap; /* Prevent breaking the layout */
+    word-wrap: break-word; /* Break long words */
+    line-height: 1.5; /* Improve readability */
+  }
+  .wide-input {
+    width: 100%; /* Make it take the full width of its container */
+    max-width: 1000px; /* Limit maximum width */
+    padding: 10px; /* Add padding for better appearance */
+    font-size: 16px; /* Improve font size */
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 4px; /* Add rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn’t affect the width */
+    margin-top: 10px; /* Add spacing from the title */
+  }
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin: 20px 0; /* Add spacing at the bottom */
+  }
+  
+  .funky-button {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .funky-button:hover {
+    transform: scale(1.1); /* Pop-out effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .funky-button:active {
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+  }
+    
+  
