@@ -32,6 +32,27 @@ import NewPage from "./components/NewPage";
 import FloatingHeader from "./components/FloatingHeader";
 
 function App() {
+  const words = [
+    "Resume",
+    "Career",
+    "IT",
+    "Technology",
+    "Skills",
+    "Professional",
+    "Experience",
+    "Portfolio",
+    "React",
+    "Frontend",
+    "Backend",
+    "Developer",
+    "Projects",
+    "Web Development",
+    "JavaScript",
+    "Full Stack",
+    "UI/UX",
+    "Design",
+    "Innovation",
+  ];
   return (
     <Router>
       <div className="app-container">

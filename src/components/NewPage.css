@@ -1,10 +1,21 @@
 /* Overall Page Styling */
 .new-page {
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    /* background: linear-gradient(135deg, #f5f7fa, #c3cfe2); */
     font-family: "Arial", sans-serif;
     padding: 20px;
     box-sizing: border-box;
   }
+  /* Main Content Layer */
+.content {
+  position: relative;
+  z-index: 1; /* Place content above background */
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   
   /* Section Boxes */
   .section {
@@ -13,7 +24,8 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     padding: 20px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 80%;
+    min-width: 1000px;
   }
   
   .section:hover {
@@ -127,6 +139,24 @@
   
   .funky-button:active {
     transform: scale(0.95); /* Slight shrink effect when clicked */
+  } 
+
+  @keyframes appearDisappear {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-    
   
+  .background-icon {
+    position: absolute; /* Position the icons absolutely */
+    width: 30px; /* Size of the icons (adjust as needed) */
+    height: 30px; /* Size of the icons */
+    animation: appearDisappear 3s infinite ease-in-out;
+    object-fit: contain; /* Ensure icons maintain their aspect ratio */
+  }
