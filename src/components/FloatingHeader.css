@@ -8,6 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+      /* Transparent gradient mask */
+  -webkit-mask-image: linear-gradient(white 90%, transparent);
+  mask-image: linear-gradient(white 80%, transparent);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
   }
   
   .floating-word {

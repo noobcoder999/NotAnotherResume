@@ -19,13 +19,15 @@
   
   /* Section Boxes */
   .section {
-    background: white;
+    background: linear-gradient(to bottom,  #dfc3ff, #fdcbcb); /* Light grey gradient */
+    
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     padding: 20px;
     width: 80%;
     min-width: 1000px;
+    max-width: 1000px; /* Prevent container from growing */
   }
   
   .section:hover {
@@ -35,6 +37,7 @@
   
   /* Section Headings */
   .section h2 {
+    font-family:  'Courier New', sans-serif; /* Fun system fonts */
     margin-bottom: 10px;
     font-size: 1.8rem;
     color: #333;
@@ -94,13 +97,17 @@
     max-height: 300px; /* Optional: Limit maximum height */
     overflow-y: auto; /* Enable scroll when text exceeds max-height */
     resize: vertical; /* Optional: Allow users to resize vertically */
+    background: white;
   }
   
   .ql-editor {
-    white-space: pre-wrap; /* Prevent breaking the layout */
-    word-wrap: break-word; /* Break long words */
-    line-height: 1.5; /* Improve readability */
+    background: white;
+    white-space: pre-wrap; /* Retain formatting with line breaks */
+    word-wrap: break-word; /* Wrap long words */
+    overflow-wrap: break-word; /* Ensure text wraps */
+    line-height: 1.5; /* Improve text readability */
   }
+  
   .wide-input {
     width: 100%; /* Make it take the full width of its container */
     max-width: 1000px; /* Limit maximum width */

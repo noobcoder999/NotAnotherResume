@@ -1,83 +1,118 @@
+/* General container for the entire form */
 .resume-forms {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure it takes the full screen height */
-  background-color: #f8f9fa; /* Light background for the form */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f8f9fa; /* Light gray background */
 }
 
+/* Main Content Section */
 .main-content {
-  flex: 1; /* Let the content grow and fill available space */
+  flex: 1; /* Fill available space */
   padding: 20px;
   box-sizing: border-box;
-  background-image: url(../assets/backgroundimg.webp);  /* Use the imported image */
-  background-size: cover;    /* Makes the image cover the whole container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;  /* Prevent the image from repeating */
+  background-image: url(../assets/backgroundimg.webp); /* Replace with your file path */
+  background-size: cover; /* Cover the whole container */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Transparent gradient mask with gradient on top */
+-webkit-mask-image: linear-gradient(transparent, white 50%);
+mask-image: linear-gradient(transparent, white 20%);
+-webkit-mask-composite: destination-in;
+mask-composite: intersect;
 }
-/*
+
+/* Card Styling */
 .card {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 30px;
-  max-width: 600px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  background-image: url(../assets/cardbgm.JPG);
+  background-color: #fdfdfd; /* Light paper-like background */
+  background-blend-mode: multiply;
+  background-position: center center;
+  border: 1px solid #d9d9d9; /* Light border resembling paper */
+  border-radius: 8px; /* Soft edges */
+  padding: 30px; /* Inner spacing */
+  max-width: 800px; /* Card width */
+  margin: 20px auto; /* Center card horizontally */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds depth */
+  text-align: center; /* Center-align the content */
+  word-wrap: break-word; /* Ensure long text wraps */
+  overflow-wrap: break-word; /* For modern browsers */
+  line-height: 1.6; /* Text line height */
+
+      /* Transparent gradient mask */
+      -webkit-mask-image: linear-gradient(white 90%, transparent);
+      mask-image: linear-gradient(white 90%, transparent);
+      -webkit-mask-composite: destination-in;
+      mask-composite: intersect;
 }
-  */
 
-  .card {
-    background-image: url(../assets/cardbgm.JPG);
-    /* background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.4)),  url(../assets/cardbgm.JPG); */
-    background-color: #fdfdfd; /* Light paper-like background color */
-    background-blend-mode: multiply; /* Blends the texture with the background */
-    background-position: center center;
-    border: 1px solid #d9d9d9; /* Light border to resemble paper edge */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds depth */
-    border-radius: 5px; /* Slight rounding to soften edges */
-    padding: 20px;
-    font-family: 'Georgia', serif; /* Gives it a handwritten or classical touch */
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px; /* Adjust width */
-    margin: 20px auto; /* Centers the card */
-    text-align: left;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Soft shadow around edges */
-    
-  }
-  
-  /* Optional hover effect for more interaction */
-  /* .card:hover {
-    transform: scale(1.02); 
-    transition: transform 0.3s ease;
-  } */
-
+/* Icon Section */
 .card .icon {
   margin-bottom: 20px;
 }
 
 .card .icon img {
-  width: 50px;
+  width: 50px; /* Icon size */
   height: 50px;
 }
 
+/* Title Styling */
 .title {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-left: 15px; /* Space between the icon and the title */
   color: #333;
+  word-break: break-word; /* Ensures long titles wrap */
+  
 }
 
+/* Description Styling */
 .description {
   font-size: 1rem;
-  line-height: 1.5;
   color: #555;
+  margin-bottom: 20px;
+  word-break: break-word;
 }
 
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pop-out Button Styling */
+.popout-button {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Gradient */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+.popout-button:hover {
+  transform: scale(1.1); /* Slight enlarge on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.popout-button:active {
+  transform: scale(1); /* Reset on click */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section */
 .footer {
   background-color: #f1f1f1;
   text-align: center;
   padding: 10px;
-  margin-top: auto; /* Push footer to the bottom */
+  margin-top: auto; /* Push footer to bottom */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -93,41 +128,8 @@
   height: 25px;
 }
 
+/* Footer Text */
 .footer-text {
   font-size: 0.9rem;
-}
-
-/* Button container for centering */
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Base button styling */
-.popout-button {
-  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Gradient background */
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 15px 30px;
-  border-radius: 8px;
-  cursor: pointer;
-  text-transform: uppercase;
-  outline: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease; /* Smooth transition */
-}
-
-/* Hover effect for pop-out */
-.popout-button:hover {
-  transform: scale(1.1); /* Slightly enlarge the button */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for pop effect */
-}
-
-/* Active (click) effect */
-.popout-button:active {
-  transform: scale(1); /* Reset scale to original */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #555;
 }

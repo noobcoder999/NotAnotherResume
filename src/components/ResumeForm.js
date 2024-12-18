@@ -21,9 +21,10 @@ const ResumeForm = () => {
         <div className="card">
           <div className="icon">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/337/337946.png" // Sample PDF icon URL
+              src={`${process.env.PUBLIC_URL}/icons/output-onlinepngtools.png`} // Sample PDF icon URL
               alt="PDF Icon"
               className="pdf-icon"
+              style={{ width: '100px', height: '100px' ,float: 'left'}} // Adjust the size here
             />
           </div>
           <h1 className="title">
