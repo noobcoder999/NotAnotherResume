@@ -201,5 +201,11 @@
   pointer-events: none; /* Prevent interactions with icons */
   z-index: 0;
 }
+@media (max-width: 768px) {
+  .icon-background {
+    left: 53%; /* Adjust for mobile (shift a bit to the right) */
+    transform: translateX(-53%); /* Adjust centering accordingly */
+  }
+}
 
 
