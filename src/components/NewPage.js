@@ -112,11 +112,14 @@ function NewPage() {
       const cols = Math.floor(screenWidth / adjustedSpacing); // Number of columns
       const rows = Math.floor(screenHeight / adjustedSpacing); // Number of rows
     
+      // Calculate offset: shift the grid to the right for small screens
+      const offset = screenWidth < 768 ? (screenWidth - (cols * adjustedSpacing)) / 2 : 0;
+    
       // Create a grid of icons ensuring no overlap
       for (let row = 0; row < rows; row++) {
         for (let col = 0; col < cols; col++) {
           const icon = iconPaths[(row * cols + col) % iconPaths.length]; // Reuse icons
-          const x = col * adjustedSpacing; // Horizontal position
+          const x = col * adjustedSpacing + offset; // Horizontal position with offset
           const y = row * adjustedSpacing; // Vertical position
     
           iconElements.push({
@@ -124,7 +127,7 @@ function NewPage() {
             id: row * cols + col,
             style: {
               top: `${y}px`, // Position the icon vertically
-              left: `${x}px`, // Position the icon horizontally
+              left: `${x}px`, // Position the icon horizontally with the offset
               position: "absolute", // Absolute positioning
               width: `${iconSize}px`, // Size of the icons
               height: `${iconSize}px`, // Size of the icons
@@ -136,7 +139,6 @@ function NewPage() {
     
       setIcons(iconElements);
     };
-    
   
     useEffect(() => {
       generateGridPositions(); // Generate grid-based positions when the component mounts
