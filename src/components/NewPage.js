@@ -60,6 +60,7 @@ function NewPage() {
        // Trigger the "Save As" dialog, and allow the user to choose where to save
        saveAs(result, 'resume.pdf'); // You can dynamically pass a name if needed
         alert("Resume generated successfully!");
+        window.location.href = '/';
       } else {
        // console.error("Error:", response.statusText);
         alert("Failed to generate resume.");

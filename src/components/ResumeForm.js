@@ -41,13 +41,15 @@ const ResumeForm = () => {
 
       {/* Footer Section */}
       <footer className="footer">
+        <p>👇 Get to Know Us 👇</p>
         <div className="social-icons">
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href=" https://www.linkedin.com/in/vennela-vollala-a5bb68201" target="_blank" rel="noopener noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+          <a href="https://www.linkedin.com/in/david-kumar-56836b166/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" />
           </a>
+          
         </div>
         <p className="footer-text">Privacy Policy · Legal · © 2024. All rights reserved.</p>
       </footer>
