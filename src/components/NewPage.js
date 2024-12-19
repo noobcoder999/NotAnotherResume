@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import ReactQuill from "react-quill";
 import "./NewPage.css"; // Import your custom CSS
 import "react-quill/dist/quill.snow.css"; // Import Quill styles
+import { saveAs } from 'file-saver';
 
 function NewPage() {
   // State management for input fields
@@ -55,6 +56,9 @@ function NewPage() {
       if (response.ok) {
        // const result = await response.json();
        // console.log("API Response:", result);
+       const result = await response.blob();
+       // Trigger the "Save As" dialog, and allow the user to choose where to save
+       saveAs(result, 'resume.pdf'); // You can dynamically pass a name if needed
         alert("Resume generated successfully!");
       } else {
        // console.error("Error:", response.statusText);
