@@ -204,7 +204,7 @@
 @media (max-width: 768px) {
   .icon-background {
     left: 58%; /* Adjust for mobile (shift a bit to the right) */
-    transform: translateX(-50%); /* Adjust centering accordingly */
+    transform: translateX(-53%); /* Adjust centering accordingly */
   }
 }
 

@@ -98,10 +98,10 @@ function NewPage() {
     // Function to generate grid-based positions for icons
     const generateGridPositions = () => {
       const iconElements = [];
-      const iconSize = 40; // Fixed size of the icons (width & height)
+      const iconSize = window.innerWidth < 768 ? 20 : 40; // Fixed size of the icons (width & height)
     
       // Increase spacing based on screen width
-      const spacing = window.innerWidth < 768 ? 100 : 90; // Increase spacing on mobile
+      const spacing = window.innerWidth < 768 ? 50 : 90; // Increase spacing on mobile
     
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
