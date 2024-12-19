@@ -44,7 +44,7 @@ function NewPage() {
     console.log("Sending Data to API:", dataToSend); // Debugging purpose
 
     try {
-      const response = await fetch("http://localhost:8080/resume/generate", {
+      const response = await fetch("https://notanotherresumejava-production.up.railway.app/resume/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
