@@ -186,3 +186,13 @@
   animation: appearDisappear 3s infinite ease-in-out;
   object-fit: contain; /* Ensure icons maintain their aspect ratio */
 }
+
+.icon-background {
+  position: fixed; /* Fixed background */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure it covers full screen width */
+  height: 100%; /* Ensure it covers full screen height */
+  z-index: 0; /* Place behind the main content */
+}
+

@@ -99,37 +99,43 @@ function NewPage() {
       const iconElements = [];
       const iconSize = 40; // Fixed size of the icons (width & height)
       const spacing = 90; // Fixed space between icons (50px)
+    
+      // Get the screen dimensions
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
-  
+    
+      // Adjust grid spacing for smaller screens
+      const adjustedSpacing = screenWidth < 768 ? 70 : spacing; // Less spacing on small screens
+    
       // Calculate how many icons can fit horizontally and vertically
-      const cols = Math.floor(screenWidth / spacing); // Number of columns
-      const rows = Math.floor(screenHeight / spacing); // Number of rows
-  
+      const cols = Math.floor(screenWidth / adjustedSpacing); // Number of columns
+      const rows = Math.floor(screenHeight / adjustedSpacing); // Number of rows
+    
       // Create a grid of icons ensuring no overlap
       for (let row = 0; row < rows; row++) {
         for (let col = 0; col < cols; col++) {
           const icon = iconPaths[(row * cols + col) % iconPaths.length]; // Reuse icons
-          const x = col * spacing;
-          const y = row * spacing;
-  
+          const x = col * adjustedSpacing; // Horizontal position
+          const y = row * adjustedSpacing; // Vertical position
+    
           iconElements.push({
             src: icon,
             id: row * cols + col,
             style: {
               top: `${y}px`, // Position the icon vertically
               left: `${x}px`, // Position the icon horizontally
-              position: "absolute", // Positioning icons absolutely
-              width: `${iconSize}px`, // Set the size of the icons
-              height: `${iconSize}px`, // Set the size of the icons
+              position: "absolute", // Absolute positioning
+              width: `${iconSize}px`, // Size of the icons
+              height: `${iconSize}px`, // Size of the icons
               animationDelay: `${Math.random() * 3}s`, // Random animation delay for appearance/disappearance
             },
           });
         }
       }
-  
+    
       setIcons(iconElements);
     };
+    
   
     useEffect(() => {
       generateGridPositions(); // Generate grid-based positions when the component mounts
