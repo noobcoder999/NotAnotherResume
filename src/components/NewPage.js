@@ -98,40 +98,31 @@ function NewPage() {
     // Function to generate grid-based positions for icons
     const generateGridPositions = () => {
       const iconElements = [];
-      const iconSize = 40; // Fixed size of the icons (width & height)
-      const spacing = 90; // Fixed space between icons (50px)
+      const iconSize = 40; // Size of the icons
+      const spacing = window.innerWidth < 768 ? 60 : 90; // Adjust spacing based on screen size
     
-      // Get the screen dimensions
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
     
-      // Adjust grid spacing for smaller screens
-      const adjustedSpacing = screenWidth < 768 ? 70 : spacing; // Less spacing on small screens
+      const cols = Math.floor(screenWidth / spacing); // Number of columns
+      const rows = Math.floor(screenHeight / spacing); // Number of rows
     
-      // Calculate how many icons can fit horizontally and vertically
-      const cols = Math.floor(screenWidth / adjustedSpacing); // Number of columns
-      const rows = Math.floor(screenHeight / adjustedSpacing); // Number of rows
-    
-      // Calculate offset: shift the grid to the right for small screens
-      const offset = screenWidth < 768 ? (screenWidth - (cols * adjustedSpacing)) / 2 : 0;
-    
-      // Create a grid of icons ensuring no overlap
       for (let row = 0; row < rows; row++) {
         for (let col = 0; col < cols; col++) {
-          const icon = iconPaths[(row * cols + col) % iconPaths.length]; // Reuse icons
-          const x = col * adjustedSpacing + offset; // Horizontal position with offset
-          const y = row * adjustedSpacing; // Vertical position
+          const icon = iconPaths[(row * cols + col) % iconPaths.length];
+          const x = col * spacing;
+          const y = row * spacing;
     
           iconElements.push({
             src: icon,
             id: row * cols + col,
             style: {
-              top: `${y}px`, // Position the icon vertically
-              left: `${x}px`, // Position the icon horizontally with the offset
-              position: "absolute", // Absolute positioning
-              width: `${iconSize}px`, // Size of the icons
-              height: `${iconSize}px`, // Size of the icons
-              animationDelay: `${Math.random() * 3}s`, // Random animation delay for appearance/disappearance
+              top: `${y}px`,
+              left: `${x}px`,
+              position: "absolute",
+              width: `${iconSize}px`,
+              height: `${iconSize}px`,
+              animationDelay: `${Math.random() * 3}s`,
             },
           });
         }
@@ -139,6 +130,7 @@ function NewPage() {
     
       setIcons(iconElements);
     };
+    
   
     useEffect(() => {
       generateGridPositions(); // Generate grid-based positions when the component mounts
