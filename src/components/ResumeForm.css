@@ -16,10 +16,10 @@
   background-position: center;
   background-repeat: no-repeat;
   /* Transparent gradient mask with gradient on top */
--webkit-mask-image: linear-gradient(transparent, white 50%);
-mask-image: linear-gradient(transparent, white 20%);
--webkit-mask-composite: destination-in;
-mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(transparent, white 50%);
+  mask-image: linear-gradient(transparent, white 20%);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
 }
 
 /* Card Styling */
@@ -39,11 +39,11 @@ mask-composite: intersect;
   overflow-wrap: break-word; /* For modern browsers */
   line-height: 1.6; /* Text line height */
 
-      /* Transparent gradient mask */
-      -webkit-mask-image: linear-gradient(white 90%, transparent);
-      mask-image: linear-gradient(white 90%, transparent);
-      -webkit-mask-composite: destination-in;
-      mask-composite: intersect;
+  /* Transparent gradient mask */
+  -webkit-mask-image: linear-gradient(white 90%, transparent);
+  mask-image: linear-gradient(white 90%, transparent);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
 }
 
 /* Icon Section */
@@ -63,7 +63,6 @@ mask-composite: intersect;
   margin-left: 15px; /* Space between the icon and the title */
   color: #333;
   word-break: break-word; /* Ensures long titles wrap */
-  
 }
 
 /* Description Styling */
@@ -132,4 +131,63 @@ mask-composite: intersect;
 .footer-text {
   font-size: 0.9rem;
   color: #555;
+}
+
+/* Mobile Responsiveness (Below 768px) */
+@media (max-width: 768px) {
+  .resume-forms {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px; /* Less padding on smaller screens */
+    max-width: 100%; /* Full-width card */
+  }
+
+  .title {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .popout-button {
+    font-size: 1rem; /* Smaller button text */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
+  .social-icons img {
+    width: 20px; /* Smaller social icon size */
+    height: 20px;
+  }
+}
+
+/* Small Devices (Below 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 0.9rem; /* Further reduce title size */
+  }
+
+  .description {
+    font-size: 0.8rem; /* Further reduce description size */
+  }
+
+  .popout-button {
+    font-size: 0.9rem; /* Button text size adjustment */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  .footer-text {
+    font-size: 0.8rem; /* Smaller footer text */
+  }
+
+  .social-icons {
+    gap: 10px; /* Reduced gap between social icons */
+  }
+
+  .social-icons img {
+    width: 18px; /* Even smaller social icon size */
+    height: 18px;
+  }
 }
