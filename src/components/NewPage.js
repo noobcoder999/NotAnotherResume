@@ -18,6 +18,7 @@ function NewPage() {
   const [summary, setSummary] = useState("");
   const [competencies, setCompetencies] = useState("");
   const [experience, setExperience] = useState("");
+  const [education, setEducation] = useState("");
   const [achievements, setAchievements] = useState("");
   const [disclaimer, setDisclaimer] = useState("");
   const [hobbies, setHobbies] = useState("");
@@ -36,6 +37,7 @@ function NewPage() {
       summary,
       competencies,
       experience,
+      education,
       achievements,
       disclaimer,
       hobbies,
@@ -60,7 +62,7 @@ function NewPage() {
        // Trigger the "Save As" dialog, and allow the user to choose where to save
        saveAs(result, 'resume.pdf'); // You can dynamically pass a name if needed
         alert("Resume generated successfully!");
-        window.location.href = '/';
+        // window.location.href = '/';
       } else {
        // console.error("Error:", response.statusText);
         alert("Failed to generate resume.");
@@ -209,6 +211,12 @@ function NewPage() {
       <div className="section box">
         <h2>Professional Experience</h2>
         <ReactQuill value={experience} onChange={setExperience} placeholder="Describe your experience..." />
+      </div>
+
+   {/* Education */}
+      <div className="section box">
+        <h2>Education</h2>
+        <ReactQuill value={education} onChange={setEducation} placeholder="Add your degree..." />
       </div>
 
       {/* Websites, Portfolios, Profiles */}
